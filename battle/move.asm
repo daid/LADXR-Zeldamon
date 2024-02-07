@@ -59,7 +59,7 @@ executeMove:
     ldh  a, [hTMPA]
     call getMonAttack
     pop  de
-    call umul8_16 ; * attack
+    call umul8_16 ; * attack (TODO: This can overflow on high levels)
     push hl
     ldh  a, [hTMPA]
     call getMonDefense

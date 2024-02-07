@@ -67,13 +67,17 @@ SRAM_udiv16:
     or      a               ; Clear carry, valid result
     ret
 
+; HL = A * E
+SRAM_umul8_8:
+    ld      c, a
+    xor     a
+    jr SRAM_umul8_16.enter_8_8
+
 ; HL = A * DE
 SRAM_umul8_16:
     ld      c, a
     xor     a
-    ;; Clear the top
-    ld      d, a
-
+.enter_8_8:
     ld      l, a
     ld      b, 8
     ld      a, c
