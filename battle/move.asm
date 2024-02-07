@@ -44,6 +44,8 @@ executeMove:
     ld   b, 0
     ld   de, 5
     call udiv16 ; / 5
+    inc  bc
+    inc  bc
     push bc
 
     ldh  a, [hTMPC]
