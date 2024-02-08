@@ -373,7 +373,6 @@ typeLabels:
     dw i"Poison"
     dw i"Ground"
     dw i"Rock"
-    dw i"Bird"
     dw i"Bug"
     dw i"Ghost"
     dw i"Special"
